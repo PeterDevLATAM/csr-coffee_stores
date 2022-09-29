@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Test from "./components/test";
+import CoffeeStore from "./components/coffee-store";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
 import Home from "./pages/home.page";
@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/test",
-    element: <Test />,
+    path: "/coffee-store/:id",
+    element: <CoffeeStore />,
   },
 ]);
 

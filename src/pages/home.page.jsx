@@ -2,7 +2,7 @@ import styles from "./home.module.css";
 
 import Banner from "../components/banner";
 import Card from "../components/card";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchCoffeeStores } from "../lib/coffee-stores";
 import { useDispatch } from "react-redux";
 import { setCoffeeStores } from "../store/coffee_stores/coffee_stores.actions";
@@ -16,7 +16,7 @@ export default function Home() {
     fetchCoffeeStores().then((response) => {
       dispatch(setCoffeeStores(response));
     });
-  }, []);
+  }, [dispatch]);
 
   const handleOnBannerClick = (e) => {
     console.log("CLICK");
@@ -29,8 +29,8 @@ export default function Home() {
           buttonText={"View stories nearby"}
           handleOnClick={handleOnBannerClick}
         />
-        {!coffeeStores && <p>Loading...</p>}
-        {coffeeStores && (
+        {!coffeeStores.length && <p>Loading...</p>}
+        {coffeeStores.length && (
           <>
             <h2 className={styles.heading2}>Carolina Stores</h2>
             <div className={styles.cardLayout}>
