@@ -1,0 +1,3 @@
+export const COFFEE_STORES_ACTION_TYPES = {
+  SET_COFFEE_STORES: "coffee_stores/SET_COFFEE_STORES",
+};

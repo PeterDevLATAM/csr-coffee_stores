@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./banner.module.css";
 
 export default function Banner({ buttonText, handleOnClick }) {
