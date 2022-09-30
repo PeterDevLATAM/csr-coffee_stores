@@ -1,7 +1,7 @@
 import { createApi } from "unsplash-js";
 
 const unsplash = createApi({
-  accessKey: "pP4To-65_BYbPUmBBPzeMCY2sOxhel1sc5ulIwwIli4",
+  accessKey: process.env.REACT_APP_USPLASH_ACCESS_KEY,
 });
 
 export const fetchCoffeeStores = async () => {
@@ -10,7 +10,7 @@ export const fetchCoffeeStores = async () => {
     method: "GET",
     headers: {
       Accept: "application/json",
-      Authorization: "fsq3PodessZN27zhi3kocp9f4OZ+WYJNxkeWhrl2NZhPMFY=",
+      Authorization: process.env.REACT_APP_FOURSQUARE_API_KEY,
     },
   };
 
