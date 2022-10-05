@@ -58,7 +58,7 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className={styles.texts}>{createElements(100)}</div>
+            <div className={styles.texts}>{createElements(1000)}</div>
           </>
         )}
       </main>
