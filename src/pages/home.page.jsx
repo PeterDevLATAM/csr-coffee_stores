@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { setCoffeeStores } from "../store/coffee_stores/coffee_stores.actions";
 import { useSelector } from "react-redux";
 import { selectCoffeeStoresReducer } from "../store/coffee_stores/coffee_stores.selector";
+import Text from "../components/text.component";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -20,6 +21,14 @@ export default function Home() {
 
   const handleOnBannerClick = (e) => {
     console.log("CLICK");
+  };
+
+  const createElements = (ammount) => {
+    const elements = [];
+    for (let i = 0; i < ammount; i++) {
+      elements.push(<Text item={i} key={i} />);
+    }
+    return elements;
   };
 
   return (
@@ -49,6 +58,7 @@ export default function Home() {
                 );
               })}
             </div>
+            <div className={styles.texts}>{createElements(100)}</div>
           </>
         )}
       </main>
