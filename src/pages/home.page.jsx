@@ -35,7 +35,7 @@ export default function Home() {
     <div className={styles.container}>
       <main className={styles.main}>
         <Banner
-          buttonText={"View stories nearby"}
+          buttonText={"View stores nearby"}
           handleOnClick={handleOnBannerClick}
         />
         {!coffeeStores.length && <p>Loading...</p>}
